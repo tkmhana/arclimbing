@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGui.h"
+#include "ofxMultiKinectV2.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +22,14 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
+    
+    ofxMultiKinectV2 kinect;
+    ofEasyCam cam;
+    ofVboMesh mesh;
+    
+    ofxPanel gui;
+    ofxFloatSlider minDistance;
+    ofxFloatSlider maxDistance;
 		
 };
